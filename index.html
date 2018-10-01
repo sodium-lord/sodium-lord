@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Salt Mines</title>
-<meta name="robots" content="noindex" />
+<meta http-equiv="Content-Security-Policy" content="default-src https://sodium-lord.github.io/; child-src 'none'; object-src 'none'">
 <style type="text/css">
 
 </style>
@@ -21,7 +21,7 @@
 	Warning: Might be super loud
 </h4>
 
-<ul>
+<ul id ="sounds">
 	<li>
  		<p><a href="Resources/geegee.mp3" class="sm2_button">Badboy</a> Badboy </p>
 	</li>
@@ -37,6 +37,8 @@ soundManager.onready(function(){
 	console.log("ready"); 
 	soundManager.setVolume(20);
 })
+
+
 </script>
 </body>
 </html>
