@@ -1,14 +1,47 @@
-<!doctype html>
-
-<html lang="en">
+<!DOCTYPE html">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+<title>Salt Mines</title>
+<meta name="robots" content="noindex" />
+<style type="text/css">
+
+
+body {
+ font:75% normal verdana,arial,tahoma,"sans serif";
+}
+
+</style>
+<link rel="stylesheet" type="text/css" href="css/mp3-player-button.css" />
+<script type="text/javascript" src="script/soundmanager2.js"></script>
+<script type="text/javascript" src="script/mp3-player-button.js"></script>
+
 </head>
+
 <body>
-	stuff
-  <script src="js/scripts.js"></script>
+
+<h1> 	
+	Command Previews
+</h1>
+<h4>
+	Warning: Might be super loud
+</h4>
+
+<ul>
+	<li>
+ 		<p><a href="Resources/geegee.mp3" class="sm2_button">Badboy</a> Badboy </p>
+	</li>
+</ul>
+
+</div>
+<script>
+soundManager.setup({
+  // required: path to directory containing SM2 SWF files
+  url: 'swf/',
+});
+soundManager.onready(function(){
+	console.log("ready"); 
+	soundManager.setVolume(20);
+})
+</script>
 </body>
 </html>
