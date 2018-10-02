@@ -37,24 +37,24 @@ soundManager.onready(function(){
 })
 
 var list = document.getElementById("sounds"); 
-fetch('files')
+fetch('https://sodium-lord.github.io/files')
   .then(response => response.text())
   .then(text => {
 	  var lines = text.split("\n");
 	  
 	  lines.forEach(function(line){
-		var listItem = document.createElement('li'); 
+		var fileName = line.replace("Resources\\", "!").replace(".mp3", "");
+		var listItem = document.createElement('li');
 		var para = document.createElement('p');		
-		var link = document.createElement('a');	  
+		var link = document.createElement('a');
 		
 		link.setAttribute("class", "sm2_button"); 
-		link.href = line; 
-		var linkText = document.createTextNode(line);
+		link.href = fileName; 
+		var linkText = document.createTextNode(fileName);
 				
-		para.textContent = ' ' + line;
+		para.textContent = ' ' + fileName;
 		para.prepend(link);
 		link.appendChild(linkText);		
-		//para.appendChild(link);		 
 		listItem.appendChild(para); 
 		list.appendChild(listItem);
 	  });
