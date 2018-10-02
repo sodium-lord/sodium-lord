@@ -37,7 +37,7 @@ soundManager.onready(function(){
 })
 
 var list = document.getElementById("sounds"); 
-fetch('https://sodium-lord.github.io/files')
+fetch('files')
   .then(response => response.text())
   .then(text => {
 	  var lines = text.split("\n");
