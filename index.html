@@ -43,16 +43,17 @@ fetch('files')
 	  var lines = text.split("\n");
 	  
 	  lines.forEach(function(line){
-		var fileName = line.replace("Resources\\", "!").replace(".mp3", "");
+	  	var fileName = line;
+		var commandName = line.replace("Resources\\", "!").replace(".mp3", "");		
 		var listItem = document.createElement('li');
 		var para = document.createElement('p');		
 		var link = document.createElement('a');
 		
 		link.setAttribute("class", "sm2_button"); 
 		link.href = fileName; 
-		var linkText = document.createTextNode(fileName);
+		var linkText = document.createTextNode(commandName);
 				
-		para.textContent = ' ' + fileName;
+		para.textContent = ' ' + commandName;
 		para.prepend(link);
 		link.appendChild(linkText);		
 		listItem.appendChild(para); 
