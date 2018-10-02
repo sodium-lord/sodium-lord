@@ -46,14 +46,14 @@ fetch('files')
 	  
 	  lines.forEach(function(line){
 		var listItem = document.createElement('li'); 
-		var para = document.createElement('p');
-		para.innerHTML = line; 
+		var para = document.createElement('p');		
 		var link = document.createElement('a');	  
 		
 		link.setAttribute("class", "sm2_button"); 
 		link.href = line; 
 		var linkText = document.createTextNode(line);
 		
+		para.textContent = line; 
 		link.appendChild(linkText);		
 		para.appendChild(link);
 		listItem.appendChild(para); 
