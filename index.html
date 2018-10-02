@@ -7,25 +7,24 @@
 
 </style>
 <link rel="stylesheet" type="text/css" href="css/mp3-player-button.css" />
+<link rel="stylesheet" type="text/css" href="css/index.css" />
 <script type="text/javascript" src="script/soundmanager2.js"></script>
 <script type="text/javascript" src="script/mp3-player-button.js"></script>
 
 </head>
 
 <body>
-
-<h1> 	
-	Command Previews
-</h1>
-<h4>
-	Warning: Might be super loud
-</h4>
-
-<ul id ="sounds">
-	
-</ul>
-
-</div>
+<div class="center-div">
+	<h1> 	
+		Command Previews
+	</h1>
+	<h4>
+		Warning: Might be super loud
+	</h4>
+	<div id="inner-div">
+		<ul id ="sounds"></ul>
+	</div>
+</div> 
 <script>
 soundManager.setup({
   // required: path to directory containing SM2 SWF files
@@ -37,7 +36,7 @@ soundManager.onready(function(){
 })
 
 var list = document.getElementById("sounds"); 
-fetch('files')
+fetch('https://sodium-lord.github.io/files')
   .then(response => response.text())
   .then(text => {
 	  var lines = text.split("\n");
