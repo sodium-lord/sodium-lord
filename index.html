@@ -52,10 +52,10 @@ fetch('files')
 		link.setAttribute("class", "sm2_button"); 
 		link.href = line; 
 		var linkText = document.createTextNode(line);
-		
-		para.textContent = line; 
+				
 		link.appendChild(linkText);		
 		para.appendChild(link);
+		para.textContent = line; 
 		listItem.appendChild(para); 
 		list.appendChild(listItem);
 	  });
