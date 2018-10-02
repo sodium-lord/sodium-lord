@@ -42,18 +42,22 @@ var list = document.getElementById("sounds");
 fetch('files')
   .then(response => response.text())
   .then(text => {
-	  var listItem = document.createElement('li'); 
-	  var para = document.createElement('p');
-	  var link = document.createElement('a');	  
+	  var lines = text.split("\n");
 	  
-	  link.setAttribute("class", "sm2_button"); 
-	  link.href = text; 
-	  var linkText = document.createTextNode(text);
-	  
-	  link.appendChild(linkText);
-	  para.appendChild(link);
-	  listItem.appendChild(para); 
-	  list.appendChild(listItem);
+	  lines.forEach(line, function(){
+		var listItem = document.createElement('li'); 
+		var para = document.createElement('p');
+		var link = document.createElement('a');	  
+		
+		link.setAttribute("class", "sm2_button"); 
+		link.href = text; 
+		var linkText = document.createTextNode(text);
+		
+		link.appendChild(linkText);
+		para.appendChild(link);
+		listItem.appendChild(para); 
+		list.appendChild(listItem);
+	  });
   });
 </script>
 </body>
