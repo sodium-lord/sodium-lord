@@ -44,14 +44,14 @@ fetch('files')
   .then(text => {
 	  var lines = text.split("\n");
 	  
-	  lines.forEach(line, function(){
+	  lines.forEach(function(line){
 		var listItem = document.createElement('li'); 
 		var para = document.createElement('p');
 		var link = document.createElement('a');	  
 		
 		link.setAttribute("class", "sm2_button"); 
-		link.href = text; 
-		var linkText = document.createTextNode(text);
+		link.href = line; 
+		var linkText = document.createTextNode(line);
 		
 		link.appendChild(linkText);
 		para.appendChild(link);
