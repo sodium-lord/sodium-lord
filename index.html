@@ -38,9 +38,17 @@ soundManager.onready(function(){
 	soundManager.setVolume(20);
 })
 
+var list = document.getElementById("sounds"); 
 fetch('files')
   .then(response => response.text())
-  .then(text => console.log(text))
+  .then(text => {
+	  var link = document.createElement('a');	  
+	  link.setAttribute("class", "sm2_button"); 
+	  link.href = text; 
+	  var linkText = document.createTextNode(text);
+	  link.appendChild(linkText);
+	  list.appendChild(link);
+  });
 </script>
 </body>
 </html>
