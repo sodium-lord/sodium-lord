@@ -22,9 +22,7 @@
 </h4>
 
 <ul id ="sounds">
-	<li>
- 		<p><a href="Resources/geegee.mp3" class="sm2_button">Badboy</a> Badboy </p>
-	</li>
+	
 </ul>
 
 </div>
@@ -53,9 +51,10 @@ fetch('files')
 		link.href = line; 
 		var linkText = document.createTextNode(line);
 				
+		para.textContent = ' ' + line;
+		para.prepend(link);
 		link.appendChild(linkText);		
-		para.appendChild(link);
-		para.textContent = line; 
+		//para.appendChild(link);		 
 		listItem.appendChild(para); 
 		list.appendChild(listItem);
 	  });
